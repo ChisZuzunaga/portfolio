@@ -34,10 +34,10 @@ const Nav = () => {
     return ( 
         <nav className={`navbar ${menuOpen ? "open" : ""}`}>
             <a href="/" className="logo">
-                <h1>Chis Zuzunaga</h1>
+                <p>Chis Zuzunaga</p>
             </a>
 
-            <div className="menu-icon" onClick={toggleMenu}>
+            <div className={`menu-icon ${menuOpen ? "open" : ""}`} onClick={toggleMenu}>
                 <div className="bar"></div>
                 <div className="bar"></div>
                 <div className="bar"></div>
@@ -62,9 +62,9 @@ const Nav = () => {
                             key={url} 
                             href={url} 
                             target="_blank" 
-                            rel="noopener noreferrer" 
+                            rel="noopener noreferrer"
                         > 
-                            <FontAwesomeIcon icon={icon} size="2x" key={url} /> 
+                            <FontAwesomeIcon icon={icon} size="2x" key={url} className="socials-logos" /> 
                         </a> 
                         ))} 
                     </li>
